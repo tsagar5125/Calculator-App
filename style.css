@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background:
+        radial-gradient(circle at 15% 20%, #49318c 0%, transparent 35%),
+        radial-gradient(circle at 85% 80%, #164b83 0%, transparent 35%),
+        linear-gradient(135deg, #090d1d, #17152d);
+    color: white;
+}
+
+.app {
+    width: 100%;
+    max-width: 390px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+    padding: 0 8px;
+}
+
+.subtitle {
+    color: #a99be8;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.logo {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #9b5cff, #526bff);
+    font-size: 28px;
+    box-shadow: 0 5px 25px #8055ff55;
+}
+
+.calculator {
+    padding: 23px;
+    border: 1px solid #ffffff20;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.075);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px #00000055;
+}
+
+.display {
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 15px 5px 25px;
+    overflow: hidden;
+}
+
+.history {
+    color: #9c96b8;
+    font-size: 14px;
+    min-height: 25px;
+    overflow-wrap: anywhere;
+    text-align: right;
+}
+
+#display {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: clamp(32px, 10vw, 42px);
+    font-weight: 600;
+    text-align: right;
+    padding: 8px 0;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.buttons button {
+    height: 65px;
+    border: 1px solid #ffffff12;
+    border-radius: 19px;
+    background: #ffffff12;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.buttons button:hover {
+    background: #ffffff27;
+    transform: translateY(-3px);
+}
+
+.buttons button:active {
+    transform: scale(0.94);
+}
+
+.buttons .utility {
+    background: #554b7c;
+    color: #d9c9ff;
+}
+
+.buttons .utility:hover {
+    background: #70609e;
+}
+
+.buttons .operator {
+    background: linear-gradient(145deg, #8755ec, #6243c8);
+    font-size: 25px;
+}
+
+.buttons .operator:hover {
+    background: linear-gradient(145deg, #a77bff, #7659e7);
+}
+
+.buttons .equal {
+    background: linear-gradient(145deg, #ff9e46, #f45c43);
+    font-size: 28px;
+    font-weight: 700;
+    box-shadow: 0 6px 20px #ff754544;
+}
+
+.buttons .equal:hover {
+    background: linear-gradient(145deg, #ffb66c, #ff735c);
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 23px;
+    color: #aaa3c4;
+    font-size: 10px;
+}
+
+.history-panel {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    padding: 25px;
+    background: #151329;
+    overflow-y: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.history-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.history-heading h2 {
+    font-size: 21px;
+}
+
+.close-btn,
+.clear-history {
+    border: none;
+    padding: 12px 18px;
+    border-radius: 12px;
+    color: white;
+    background: #6243c8;
+    cursor: pointer;
+}
+
+.history-item {
+    padding: 15px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+    background: #ffffff12;
+    color: #ddd5ff;
+    overflow-wrap: anywhere;
+}
+
+.history-item strong {
+    display: block;
+    color: white;
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.clear-history {
+    width: 100%;
+    margin-top: 15px;
+    background: #d94c58;
+}
+
+@media (max-width: 380px) {
+    .calculator {
+        padding: 16px;
+    }
+
+    .buttons {
+        gap: 9px;
+    }
+
+    .buttons button {
+        height: 58px;
+        border-radius: 15px;
+    }
+}
